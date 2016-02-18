@@ -389,7 +389,7 @@ class _Record(object):
             return True
         for alt in self.ALT:
             if alt is None:
-                return True
+                return False
             if alt.type != "SNV" and alt.type != "MNV":
                 return False
             elif len(alt) != len(self.REF):
